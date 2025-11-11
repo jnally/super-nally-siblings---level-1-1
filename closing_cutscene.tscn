@@ -1,0 +1,33 @@
+[gd_scene load_steps=3 format=3 uid="uid://b03cey3552uqt"]
+
+[ext_resource type="Script" uid="uid://cu86n6cos7ij4" path="res://closing_cutscene.gd" id="1_ynagn"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_00cnw"]
+
+[node name="closing_cutscene" type="Node2D"]
+script = ExtResource("1_ynagn")
+
+[node name="Label" type="Label" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 223.0
+offset_top = 286.0
+offset_right = 970.0
+offset_bottom = 361.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "The End
+
+You've reached the flagpole! You can now breathe a sigh of relief... Oh no! Here comes the menu!"
+label_settings = SubResource("LabelSettings_00cnw")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 5.0
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

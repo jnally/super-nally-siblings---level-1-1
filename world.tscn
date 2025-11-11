@@ -35,8 +35,8 @@ sources/2 = SubResource("TileSetAtlasSource_wse8f")
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_gbfbk"]
 size = Vector2(9749.5, 34)
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_ic0uy"]
-radius = 16.124516
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ioo17"]
+size = Vector2(880, 993)
 
 [node name="world" type="Node2D"]
 script = ExtResource("1_pkg7o")
@@ -100,14 +100,14 @@ shape = SubResource("RectangleShape2D_gbfbk")
 [node name="transition" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="transition"]
-position = Vector2(3176, 580)
-shape = SubResource("CircleShape2D_ic0uy")
+position = Vector2(3611, 266.5)
+shape = SubResource("RectangleShape2D_ioo17")
 
 [node name="toad" parent="." instance=ExtResource("4_aqk2v")]
-position = Vector2(2808, 601)
+position = Vector2(2905, 573)
 
 [node name="toad2" parent="." instance=ExtResource("4_aqk2v")]
-position = Vector2(2827, 601)
+position = Vector2(2870, 605)
 
 [node name="big_toad" parent="." instance=ExtResource("5_036b0")]
 position = Vector2(2746, 542)
@@ -136,17 +136,8 @@ position = Vector2(1327, 604)
 [node name="toad10" parent="." instance=ExtResource("4_aqk2v")]
 position = Vector2(1575, 602)
 
-[node name="toad11" parent="." instance=ExtResource("4_aqk2v")]
-position = Vector2(935, 542)
-
-[node name="toad12" parent="." instance=ExtResource("4_aqk2v")]
-position = Vector2(378, 603)
-
 [node name="toad13" parent="." instance=ExtResource("4_aqk2v")]
-position = Vector2(758, 540)
-
-[node name="toad14" parent="." instance=ExtResource("4_aqk2v")]
-position = Vector2(842, 603)
+position = Vector2(337, 541)
 
 [node name="coin" parent="." instance=ExtResource("6_dwbse")]
 position = Vector2(724, 549)
@@ -180,6 +171,21 @@ position = Vector2(1931, 469)
 
 [node name="coin11" parent="." instance=ExtResource("6_dwbse")]
 position = Vector2(1881, 531)
+
+[node name="big_toad2" parent="." instance=ExtResource("5_036b0")]
+position = Vector2(893, 600)
+
+[node name="big_toad3" parent="." instance=ExtResource("5_036b0")]
+position = Vector2(1040, 599)
+
+[node name="big_toad4" parent="." instance=ExtResource("5_036b0")]
+position = Vector2(2262, 603)
+
+[node name="big_toad5" parent="." instance=ExtResource("5_036b0")]
+position = Vector2(2466, 540)
+
+[node name="big_toad6" parent="." instance=ExtResource("5_036b0")]
+position = Vector2(2626, 604)
 
 [connection signal="body_entered" from="interact" to="." method="_on_interact_body_entered"]
 [connection signal="body_entered" from="transition" to="." method="_on_transition_body_entered"]

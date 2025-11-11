@@ -1,0 +1,27 @@
+[gd_scene load_steps=3 format=3 uid="uid://yq3iqrtt0qfh"]
+
+[ext_resource type="Script" uid="uid://60tlv0rmer5m" path="res://opening_cutscene.gd" id="1_acnil"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_acnil"]
+
+[node name="opening_cutscene" type="Node2D"]
+position = Vector2(592, 323)
+script = ExtResource("1_acnil")
+
+[node name="Label" type="Label" parent="."]
+offset_left = -339.0
+offset_top = -36.0
+offset_right = 343.0
+offset_bottom = 39.0
+text = "Super Nally Siblings
+
+Yikes! You've been teleported to a weird-looking version of Super Mario Bros Level 1-1!!!"
+label_settings = SubResource("LabelSettings_acnil")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 4.0
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
