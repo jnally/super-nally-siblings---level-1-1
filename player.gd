@@ -65,7 +65,13 @@ func die():
 	is_dying = true
 	animated_sprited_2d.play("die")
 	await move_player_up_and_down()
-	get_tree().call_deferred("reload_current_scene")
+	Global.player_lives -= 1
+	
+	if Global.player_lives > 0:
+		print("Reloading Scene")
+		get_tree().call_deferred("reload_current_scene")
+	else:
+		get_tree().change_scene_to_file("res://gameover.tscn")	
 	
 func move_player_up_and_down():
 	var start_position = position

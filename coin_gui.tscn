@@ -8,3 +8,9 @@ script = ExtResource("1_s4fnc")
 [node name="Label" type="Label" parent="."]
 offset_right = 40.0
 offset_bottom = 23.0
+
+[node name="Label2" type="Label" parent="."]
+offset_left = 1.0
+offset_top = 28.0
+offset_right = 39.0
+offset_bottom = 51.0
